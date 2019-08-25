@@ -1,5 +1,4 @@
 node {
-    external = load 'Pipeline.groovy'
     stage('Checkout'){
         echo 'begin checkout'
         git branch: 'master',
@@ -7,6 +6,7 @@ node {
         echo 'finished checkout'
    }
    stage('Build'){
+        external = load 'Pipeline.groovy'
         new Pipeline().build()
    }
 }
