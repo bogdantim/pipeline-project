@@ -1,4 +1,4 @@
-class Pipeline{
+class PipelineBuilder{
    def build(){
       bat label: '', script: 'mvn clean install && exit %%ERRORLEVEL%%'
    }
