@@ -6,7 +6,7 @@ node {
         echo 'finished checkout'
    }
    stage('Build'){
-        def libPath = "${env.WORKSPACE}" + "@script" + "/PipelineBuilder.groovy"
+        def libPath = "${env.WORKSPACE}" + "@script" + "/PipelineBuild.gdsl"
         def pipelineBuilder = load libPath
         pipelineBuilder.build()
    }
