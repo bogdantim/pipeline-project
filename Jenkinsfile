@@ -6,7 +6,7 @@ node {
         echo 'finished checkout'
    }
    stage('Build'){
-        external = load 'Pipeline.groovy'
-        new Pipeline().build()
+        def pipelineBuilder = load 'PipelineBuilder.groovy'
+        pipelineBuilder.build()
    }
 }
