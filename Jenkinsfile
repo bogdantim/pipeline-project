@@ -1,4 +1,3 @@
-import Pipeline
 node {
     stage('Checkout'){
         echo 'begin checkout'
