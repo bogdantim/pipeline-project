@@ -1,4 +1,5 @@
 node {
+    external = load 'Pipeline.groovy'
     stage('Checkout'){
         echo 'begin checkout'
         git branch: 'master',
