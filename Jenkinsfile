@@ -1,3 +1,4 @@
+import Pipeline
 node {
     stage('Checkout'){
         echo 'begin checkout'
@@ -6,6 +7,6 @@ node {
         echo 'finished checkout'
    }
    stage('Build'){
-        bat label: '', script: 'mvn clean install && exit %%ERRORLEVEL%%'
+        new Pipeline().build()
    }
 }
